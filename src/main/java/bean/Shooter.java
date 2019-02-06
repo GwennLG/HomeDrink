@@ -1,74 +1,30 @@
 package bean;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 
 @Entity
+@PrimaryKeyJoinColumn(name="ID")
 @Table(name="SHOOTER")
-public class Shooter {
+public class Shooter extends Boisson {
 
-	@Column(name="NOM")
-	String nom;
+	@Column(name="NBR_ALCOOL")
+	int nbrAlccol;
 	
-	@Column(name="DESCRIPTIONS")
-	String descriptions;
+	@Column(name="LISTE_ALCOOL")
+	@OneToMany
+	List<Vins_Spiritueux> listeAlcool;
 	
-	@Column(name="PRIX")
-	int prix;
-
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="ID")
-	int id;
-
-	public Shooter(String nom, String descriptions, int prix, int id) {
-		super();
-		this.nom = nom;
-		this.descriptions = descriptions;
-		this.prix = prix;
-		this.id = id;
-	}
-
-	@Override
-	public String toString() {
-		return "Shooter [nom=" + nom + ", descriptions=" + descriptions + ", prix=" + prix + ", id=" + id + "]";
-	}
-
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public String getDescriptions() {
-		return descriptions;
-	}
-
-	public void setDescriptions(String descriptions) {
-		this.descriptions = descriptions;
-	}
-
-	public int getPrix() {
-		return prix;
-	}
-
-	public void setPrix(int prix) {
-		this.prix = prix;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
+	
 	
 	
 	

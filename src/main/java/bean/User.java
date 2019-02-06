@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -20,7 +21,10 @@ public class User {
 	@Column(name="NOM")
 	String nom;
 	
-	@Column(name="MAIL")
+	@Column(name="PRENOM")
+	String prenom;
+	
+	@Column(name="MAIL", unique = true)
 	String mail;
 	
 	@Column(name="ADRESSE")
@@ -32,12 +36,12 @@ public class User {
 	@Column(name="FIDELITE")
 	int fidelite;
 	
-	List<Cocktail> favoriCocktail;
-	
-	List<Shooter> favoriShooter;
+	@Column(name="FAVORI_BOISSON")
+	@OneToMany
+	List<Boisson> favoriBoisson;
 
-	public User(int id, String nom, String mail, String adresse, int cb, int fidelite, List<Cocktail> favoriCocktail,
-			List<Shooter> favoriShooter) {
+
+	public User(int id, String nom, String mail, String adresse, int cb, int fidelite, List<Boisson> favoriBoisson) {
 		super();
 		this.id = id;
 		this.nom = nom;
@@ -45,15 +49,13 @@ public class User {
 		this.adresse = adresse;
 		this.cb = cb;
 		this.fidelite = fidelite;
-		this.favoriCocktail = favoriCocktail;
-		this.favoriShooter = favoriShooter;
+		this.favoriBoisson = favoriBoisson;
 	}
 
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", nom=" + nom + ", mail=" + mail + ", adresse=" + adresse + ", cb=" + cb
-				+ ", fidelite=" + fidelite + ", favoriCocktail=" + favoriCocktail + ", favoriShooter=" + favoriShooter
-				+ "]";
+				+ ", fidelite=" + fidelite + ", favoriBoisson=" + favoriBoisson + "]";
 	}
 
 	public int getId() {
@@ -104,20 +106,12 @@ public class User {
 		this.fidelite = fidelite;
 	}
 
-	public List<Cocktail> getFavoriCocktail() {
-		return favoriCocktail;
+	public List<Boisson> getFavoriBoisson() {
+		return favoriBoisson;
 	}
 
-	public void setFavoriCocktail(List<Cocktail> favoriCocktail) {
-		this.favoriCocktail = favoriCocktail;
-	}
-
-	public List<Shooter> getFavoriShooter() {
-		return favoriShooter;
-	}
-
-	public void setFavoriShooter(List<Shooter> favoriShooter) {
-		this.favoriShooter = favoriShooter;
+	public void setFavoriBoisson(List<Boisson> favoriBoisson) {
+		this.favoriBoisson = favoriBoisson;
 	}
 
 

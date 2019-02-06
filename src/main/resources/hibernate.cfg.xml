@@ -8,6 +8,15 @@
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">activ</property> 
 		<!-- Seront indiqués ici les fichiers de mapping -->
+		<mapping class="beans.Boisson"/>
+		<mapping class="beans.Biere"/>
+		<mapping class="beans.Cocktail"/>
+		<mapping class="beans.Coffret"/>
+		<mapping class="beans.GestionBoisson"/>
+		<mapping class="beans.SansAlcool"/>
+		<mapping class="beans.Shooter"/>
+		<mapping class="beans.User"/>
+		<mapping class="beans.Vins_Spiritueux"/>
 
 	</session-factory>
 </hibernate-configuration>

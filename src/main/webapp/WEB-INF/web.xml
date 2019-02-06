@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>BoissonServlet</servlet-name>
+  	<display-name>BoissonServlet</display-name>
+  	<description></description>
+  	<servlet-class>servlet.BoissonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BoissonServlet</servlet-name>
+  	<url-pattern>/BoissonServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

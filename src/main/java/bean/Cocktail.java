@@ -5,25 +5,36 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
+@PrimaryKeyJoinColumn(name="ID")
 @Table(name="COCKTAIL")
-public class Cocktail {
-
-	@Column(name="NOM")
-	String nom;
-	
-	@Column(name="DESCRIPTIONS")
-	String descriptions;
-	
-	@Column(name="PRIX")
-	int prix;
+public class Cocktail extends Boisson {
 	
 	@Column(name="ALCOOL")
 	boolean alcool;
 
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="ID")
-	int id;
+	@Override
+	public String toString() {
+		return "Cocktail [alcool=" + alcool + "]";
+	}
+
+	public Cocktail(boolean alcool) {
+		super();
+		this.alcool = alcool;
+	}
+
+	public boolean isAlcool() {
+		return alcool;
+	}
+
+	public void setAlcool(boolean alcool) {
+		this.alcool = alcool;
+	}
+
+	
+
+	
 }
