@@ -6,6 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import bean.Boisson;
 
+
 public class GestionBoisson {
 	
 	
@@ -21,6 +22,19 @@ public class GestionBoisson {
 		session.beginTransaction();
 		session.save(b);
 		session.getTransaction().commit();
+	}
+	
+	
+	public static Boisson getBoisson(int IDBoisson) {
+		@SuppressWarnings("deprecation")
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		
+		session.beginTransaction();
+		Boisson boisson = (Boisson) session.get(Boisson.class, IDBoisson);
+		session.getTransaction().commit();
+		return(boisson);
+		
 	}
 	
 

@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import bean.Coffret;
+import bean.User;
 
 public class GestionCoffret {
 
@@ -22,5 +23,18 @@ public class GestionCoffret {
 		session.save(c);
 		session.getTransaction().commit();
 	}
+	
+	public static Coffret getCoffret(int IDCoffret) {
+		@SuppressWarnings("deprecation")
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		
+		session.beginTransaction();
+		Coffret coffret = (Coffret) session.get(Coffret.class, IDCoffret);
+		session.getTransaction().commit();
+		return(coffret);
+		
+	}
+	
 	
 }

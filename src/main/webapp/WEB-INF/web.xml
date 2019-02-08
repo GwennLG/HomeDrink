@@ -16,6 +16,12 @@
   	<description></description>
   	<servlet-class>servlet.Initialisation</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ConnexionServlet</servlet-name>
+  	<display-name>ConnexionServlet</display-name>
+  	<description></description>
+  	<servlet-class>servlet.ConnexionServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>BoissonServlet</servlet-name>
   	<url-pattern>/BoissonServlet</url-pattern>
@@ -23,5 +29,9 @@
   <servlet-mapping>
   	<servlet-name>Initialisation</servlet-name>
   	<url-pattern>/Initialisation</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ConnexionServlet</servlet-name>
+  	<url-pattern>/ConnexionServlet</url-pattern>
   </servlet-mapping>
 </web-app>
