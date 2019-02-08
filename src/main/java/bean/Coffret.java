@@ -1,10 +1,13 @@
 package bean;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,14 +29,19 @@ public class Coffret {
 	
 	@Column(name="QUANTITE_BOUTEILLE")
 	int quantitéBouteille;
+	
+	
+	@Column(name="LISTE_BOISSON")
+	@OneToMany
+	List<Boisson> listeBoisson;
 
-	public Coffret(String nom, String descriptions, int prix, int id, int quantitéBouteille) {
+	public Coffret(String nom, String descriptions, int prix, int quantitéBouteille, List<Boisson> listeBoisson) {
 		super();
 		this.nom = nom;
 		this.descriptions = descriptions;
 		this.prix = prix;
-		this.id = id;
 		this.quantitéBouteille = quantitéBouteille;
+		this.listeBoisson = listeBoisson;
 	}
 
 	@Override

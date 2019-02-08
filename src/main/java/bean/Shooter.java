@@ -18,11 +18,40 @@ import javax.persistence.Table;
 public class Shooter extends Boisson {
 
 	@Column(name="NBR_ALCOOL")
-	int nbrAlccol;
+	int nbrAlcool;
 	
-	@Column(name="LISTE_ALCOOL")
+	@Column(name="LISTE_BOISSON")
 	@OneToMany
-	List<Vins_Spiritueux> listeAlcool;
+	List<Boisson> listeBoisson;
+	
+	
+
+	@Override
+	public String toString() {
+		return "Shooter [nbrAlcool=" + nbrAlcool + ", listeBoisson=" + listeBoisson + "]";
+	}
+
+	public Shooter(double prix, int quantite, String nom, String description, int nbrAlcool, List<Boisson> listeBoisson) {
+		super(prix, quantite, nom, description);
+		this.nbrAlcool = nbrAlcool;
+		this.listeBoisson = listeBoisson;
+	}
+
+	public int getNbrAlcool() {
+		return nbrAlcool;
+	}
+
+	public void setNbrAlcool(int nbrAlcool) {
+		this.nbrAlcool = nbrAlcool;
+	}
+
+	public List<Boisson> getListeAlcool() {
+		return listeBoisson;
+	}
+
+	public void setListeAlcool(List<Boisson> listeBoisson) {
+		this.listeBoisson = listeBoisson;
+	}
 	
 	
 	

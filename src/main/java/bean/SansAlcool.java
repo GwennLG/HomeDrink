@@ -23,8 +23,8 @@ public class SansAlcool extends Boisson {
 		return "SansAlcool [petillant=" + petillant + "]";
 	}
 
-	public SansAlcool(boolean petillant) {
-		super();
+	public SansAlcool(double prix, int quantite, String nom, String description, boolean petillant) {
+		super(prix, quantite, nom, description);
 		this.petillant = petillant;
 	}
 

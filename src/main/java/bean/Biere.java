@@ -19,16 +19,20 @@ public class Biere extends Boisson {
 	
 	@Column(name="PRESSION")
 	boolean pression;
+	
+	@Column(name="ORIGINE")
+	Enum<Origine> origine;
 
 	@Override
 	public String toString() {
 		return "Biere [degre=" + degre + ", pression=" + pression + "]";
 	}
 
-	public Biere(double prix, int quantite, String nom, String description, double degre, boolean pression) {
+	public Biere(double prix, int quantite, String nom, String description, double degre, boolean pression, Enum<Origine> origine) {
 		super(prix, quantite, nom, description);
 		this.degre = degre;
 		this.pression = pression;
+		this.origine = origine;
 	}
 
 	public double getDegre() {

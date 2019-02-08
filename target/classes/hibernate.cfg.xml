@@ -4,19 +4,21 @@
 	<session-factory> <!-- Interactions avec la BDD -->
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost/tests</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/Home_Drink</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">activ</property> 
+		<property name="hbm2ddl.auto">create</property>  
+		
 		<!-- Seront indiqués ici les fichiers de mapping -->
-		<mapping class="beans.Boisson"/>
-		<mapping class="beans.Biere"/>
-		<mapping class="beans.Cocktail"/>
-		<mapping class="beans.Coffret"/>
-		<mapping class="beans.GestionBoisson"/>
-		<mapping class="beans.SansAlcool"/>
-		<mapping class="beans.Shooter"/>
-		<mapping class="beans.User"/>
-		<mapping class="beans.Vins_Spiritueux"/>
+		<mapping class="bean.Boisson"/>
+		<mapping class="bean.Biere"/>
+		<mapping class="bean.Cocktail"/>
+		<mapping class="bean.Coffret"/>
+		<mapping class="bean.GestionBoisson"/>
+		<mapping class="bean.SansAlcool"/>
+		<mapping class="bean.Shooter"/>
+		<mapping class="bean.User"/>
+		<mapping class="bean.Vins_Spiritueux"/>
 
 	</session-factory>
 </hibernate-configuration>

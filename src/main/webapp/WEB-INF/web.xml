@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>servlet.BoissonServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Initialisation</servlet-name>
+  	<display-name>Initialisation</display-name>
+  	<description></description>
+  	<servlet-class>servlet.Initialisation</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>BoissonServlet</servlet-name>
   	<url-pattern>/BoissonServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Initialisation</servlet-name>
+  	<url-pattern>/Initialisation</url-pattern>
   </servlet-mapping>
 </web-app>

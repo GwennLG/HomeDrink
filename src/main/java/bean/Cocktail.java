@@ -21,8 +21,8 @@ public class Cocktail extends Boisson {
 		return "Cocktail [alcool=" + alcool + "]";
 	}
 
-	public Cocktail(boolean alcool) {
-		super();
+	public Cocktail(double prix, int quantite, String nom, String description, boolean alcool) {
+		super(prix, quantite, nom, description);
 		this.alcool = alcool;
 	}
 

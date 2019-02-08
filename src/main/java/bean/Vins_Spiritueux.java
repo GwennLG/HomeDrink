@@ -11,15 +11,19 @@ import javax.persistence.Table;
 @Entity
 @PrimaryKeyJoinColumn(name="ID")
 @Table(name="VINS_SPIRITUEUX")
-public class Vins_Spiritueux {
+public class Vins_Spiritueux extends Boisson {
 
 
 	@Column(name="DEGRE")
 	int degre;
+	
+	@Column(name="ORIGINE")
+	Enum<Origine> origine;
 
-	public Vins_Spiritueux(int degre) {
-		super();
+	public Vins_Spiritueux(double prix, int quantite, String nom, String description, int degre, Enum<Origine> origine) {
+		super(prix, quantite, nom, description);
 		this.degre = degre;
+		this.origine = origine;
 	}
 
 	@Override

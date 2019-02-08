@@ -17,8 +17,8 @@ public abstract class Boisson {
 	@Column(name="PRIX")
 	protected double prix;
 	
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="ID")
+	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="ID", updatable =false, nullable = false)
 	protected int id;
 	
 	@Column(name="QUANTITE")
