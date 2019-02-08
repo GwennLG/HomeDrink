@@ -9,11 +9,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Enum.Origine;
+import Gestion.GestionBoisson;
+import Gestion.GestionCoffret;
+import Gestion.GestionUser;
 import bean.Biere;
 import bean.Boisson;
 import bean.Cocktail;
 import bean.Coffret;
-import bean.Origine;
 import bean.SansAlcool;
 import bean.Shooter;
 import bean.User;
@@ -192,7 +195,74 @@ public class BoissonServlet extends HttpServlet {
 		Coffret coffret_3 = new Coffret("Irlande Time",
 				"Bailey's, Kahlua et une pack de 6 bières mais nous avons aussi pensé aux Sam de la soirée", 77, 4,
 				coffret3);
+		
+		/*
+		 *   Sauvegarder les instanciations dans la BDD pour les boissons
+		 */
+		// Vin Spiritueux
+//		GestionBoisson.saveBoisson(kahlua);
+		GestionBoisson.saveBoisson(baileys);
+		GestionBoisson.saveBoisson(brouilly);
+		GestionBoisson.saveBoisson(amaretto);
+		GestionBoisson.saveBoisson(gin);
+		GestionBoisson.saveBoisson(cointreau);
+		GestionBoisson.saveBoisson(tequila);
+		GestionBoisson.saveBoisson(vodka);
+		GestionBoisson.saveBoisson(anjou);
+		GestionBoisson.saveBoisson(muscadet);
+		GestionBoisson.saveBoisson(chardonnay);
+		
+		// Biere
+		GestionBoisson.saveBoisson(laBete);
+		GestionBoisson.saveBoisson(kilkenny);
+		GestionBoisson.saveBoisson(guinness);
+		GestionBoisson.saveBoisson(murphy);
+		
+		
+		// Shooter
+		GestionBoisson.saveBoisson(B52);
+		GestionBoisson.saveBoisson(tequilaShot);
+		GestionBoisson.saveBoisson(babyGuiness);
+		GestionBoisson.saveBoisson(orgasm);
+		GestionBoisson.saveBoisson(tgv);
+		GestionBoisson.saveBoisson(VodkaCaramel);
+		
+		// Cocktails
+		GestionBoisson.saveBoisson(SexAndTheBeachSoft);
+		GestionBoisson.saveBoisson(SexAndTheBeach);
+		GestionBoisson.saveBoisson(cosmoSoft);
+		GestionBoisson.saveBoisson(cosmo);
+		GestionBoisson.saveBoisson(mojitoSoft);
+		GestionBoisson.saveBoisson(mojito);
+		GestionBoisson.saveBoisson(pinaColadaSoft);
+		GestionBoisson.saveBoisson(pinaColada);
 
+		// Softs
+		GestionBoisson.saveBoisson(siropCaramel);
+		GestionBoisson.saveBoisson(siropGrenadine);
+		GestionBoisson.saveBoisson(cocaCola);
+		GestionBoisson.saveBoisson(jusPomme);
+		GestionBoisson.saveBoisson(jusOrange);
+		GestionBoisson.saveBoisson(tonic);
+		GestionBoisson.saveBoisson(eauGazeuse);
+
+		
+		/*
+		 *   Sauvegarder les instanciations dans la BDD pour les utilisateurs
+		 */
+		GestionUser.saveMember(lea);
+		GestionUser.saveMember(pierrick);
+		GestionUser.saveMember(kevin);
+		GestionUser.saveMember(gwen);
+		
+		
+		/*
+		 *   Sauvegarder les instaciations dans la BDD pour Coffrets
+		 */
+		GestionCoffret.saveCoffret(coffret_1);
+		GestionCoffret.saveCoffret(coffret_2);
+		GestionCoffret.saveCoffret(coffret_3);
+		
 	}
 
 	/**

@@ -1,4 +1,4 @@
-package bean;
+package Enum;
 
 public enum Origine {
 	IRLANDE,

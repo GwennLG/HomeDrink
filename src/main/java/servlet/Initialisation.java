@@ -10,9 +10,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import Gestion.GestionBoisson;
 import bean.Biere;
 import bean.Boisson;
-import bean.GestionBoisson;
 import bean.Vins_Spiritueux;
 
 /**

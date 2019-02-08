@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import Enum.Origine;
+
 
 @Entity
 @PrimaryKeyJoinColumn(name="ID")
