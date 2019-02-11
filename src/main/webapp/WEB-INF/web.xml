@@ -22,6 +22,12 @@
   	<description></description>
   	<servlet-class>servlet.ConnexionServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AccueilServlet</servlet-name>
+  	<display-name>AccueilServlet</display-name>
+  	<description></description>
+  	<servlet-class>servlet.AccueilServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>BoissonServlet</servlet-name>
   	<url-pattern>/BoissonServlet</url-pattern>
@@ -33,5 +39,9 @@
   <servlet-mapping>
   	<servlet-name>ConnexionServlet</servlet-name>
   	<url-pattern>/ConnexionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AccueilServlet</servlet-name>
+  	<url-pattern>/AccueilServlet</url-pattern>
   </servlet-mapping>
 </web-app>

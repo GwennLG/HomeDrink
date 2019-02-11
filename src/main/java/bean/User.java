@@ -68,6 +68,10 @@ public class User {
 		this.fidelite = fidelite;
 		this.favoriBoisson = favoriBoisson;
 	}
+	
+	public User() {
+	}
+	
 
 
 	public int getId() {
