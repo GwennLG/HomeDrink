@@ -16,7 +16,7 @@
     <!--relation avec des documents externe-->
     <link rel="stylesheet" href="typecssformulaireprojet.css">
     <link rel="icon" href="image/favicon.ico">
-    <link type="text/css" rel="stylesheet" href="CSS/.css">
+    <link type="text/css" rel="stylesheet" href="CSS/Connexion.css">
 </head>
 
 
@@ -27,7 +27,7 @@
     </header>
     
     <section class="formulaire">
-        <form action="ConnexionServlet" method="GET">
+        <form action="ConnexionServlet" method="POST">
             <div class="contenu">
                 <fieldset>
                    
@@ -38,7 +38,7 @@
                     
                     <p>
                         <label for="password">Mot de passe</label>
-                        <input type="text" id="password" name="password" placeholder="Mot de passe" required="required"/>
+                        <input type="password" id="password" name="password" placeholder="Mot de passe" required="required"/>
                     </p>
 
                 </fieldset>

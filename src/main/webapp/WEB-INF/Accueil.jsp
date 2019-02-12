@@ -21,7 +21,7 @@
         </div>
         <nav>
             <ul id="menu">
-                <li><a href="#">Accueil</a></li>
+                <li><a href="/HomeDrink/AccueilServlet">Accueil</a></li>
                 <li><a href="#">Boissons</a>
                     <ul>
                         <li><a href="#">Vins / Spiriteux</a></li>
@@ -36,8 +36,8 @@
                 <li><a href="#">Apéritifs</a></li>
                 <li><a href="#">Login</a>
                     <ul>
-                        <li><a href="#">Connexion</a></li>
-                        <li><a href="#">Créer un compte</a></li>
+                        <li><a href="/HomeDrink/ConnexionServlet">Connexion</a></li>
+                        <li><a href="/HomeDrink/InscriptionServlet">Créer un compte</a></li>
                         <li><a href="#">Informations Bancaire</a></li>
                     </ul>
                 </li>

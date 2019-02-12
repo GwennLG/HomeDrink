@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -33,6 +34,25 @@ public class ConnexionServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		HttpSession session = request.getSession();
+		
+		
+		if(session.getAttribute("userActuel") == null) {
+			
+		this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request, response);
+		
+		} else if (session.getAttribute("userActuel") != null) {
+			
+			response.sendRedirect("/HomeDrink/AccueilServlet");
+		}
+		 
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		User membreConnexion = new User();
@@ -45,7 +65,7 @@ public class ConnexionServlet extends HttpServlet {
 		
 		session.beginTransaction();
 		List <User> result = session.createQuery
-				("FROM Membres where email = " + email + "AND password = " + password + " ").list();
+				("FROM User WHERE mail = '" + email + "' AND motDePasse = '" + password + "' ").list();
 		session.getTransaction().commit();
 		session.close();
 		
@@ -57,17 +77,11 @@ public class ConnexionServlet extends HttpServlet {
 			erreurConnexion = false;
 			for(User membre : result) {
 				membreConnexion=membre;
+				HttpSession httpSession = request.getSession();
+				httpSession.setAttribute("userActuel", membreConnexion);
+				this.getServletContext().getRequestDispatcher("/WEB-INF/Accueil.jsp").forward(request, response);
 			}
 		}
-		 
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		
 	}
 
 }

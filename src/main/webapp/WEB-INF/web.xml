@@ -28,6 +28,12 @@
   	<description></description>
   	<servlet-class>servlet.AccueilServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>InscriptionServlet</servlet-name>
+  	<display-name>InscriptionServlet</display-name>
+  	<description></description>
+  	<servlet-class>servlet.InscriptionServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>BoissonServlet</servlet-name>
   	<url-pattern>/BoissonServlet</url-pattern>
@@ -43,5 +49,9 @@
   <servlet-mapping>
   	<servlet-name>AccueilServlet</servlet-name>
   	<url-pattern>/AccueilServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InscriptionServlet</servlet-name>
+  	<url-pattern>/InscriptionServlet</url-pattern>
   </servlet-mapping>
 </web-app>
