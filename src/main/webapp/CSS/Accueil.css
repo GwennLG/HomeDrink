@@ -1,4 +1,4 @@
-@charset "ISO-8859-1";
+@charset "UTF-8";
 
 *{
     box-sizing: border-box;
@@ -17,7 +17,7 @@ body{
 .top{
     display: flex;
     border-bottom: solid 1px blue;
-    background: url("images/banniere_bouteilles.bmp");
+    background: url("images/banniere_bouteilles.jpg");
     height: 160px;
 }
 
@@ -162,7 +162,7 @@ nav #menu ul li:first-child a:after{
     border-right: 5px solid transparent;
     border-bottom: 8px solid #444;
 
- /* faire un élément fantome ::after
+ /* faire un Ã©lÃ©ment fantome ::after
  */
 }
 

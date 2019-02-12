@@ -26,6 +26,7 @@ public class AccueilServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+		this.getServletContext().getRequestDispatcher("/WEB-INF/Accueil.jsp").forward(request, response);
 	}
 
 	/**
