@@ -17,7 +17,7 @@ body{
 .top{
     display: flex;
     border-bottom: solid 1px blue;
-    background: url("images/banniere_bouteilles.jpg");
+    background: url("../images/banniere_bouteilles.jpg");
     height: 160px;
 }
 

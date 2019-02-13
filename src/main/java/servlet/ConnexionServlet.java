@@ -38,8 +38,11 @@ public class ConnexionServlet extends HttpServlet {
 		
 		
 		if(session.getAttribute("userActuel") == null) {
-			
+		
+		request.setAttribute("Mot de passe et/ou email incorrect", false);
+		request.setAttribute("Session incorrect", false);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request, response);
+		
 		
 		} else if (session.getAttribute("userActuel") != null) {
 			
@@ -72,9 +75,13 @@ public class ConnexionServlet extends HttpServlet {
 		
 		if(result.size() == 0) {
 			erreurConnexion = true;
-			request.setAttribute("Mot de passe et/ou email incorrect",erreurConnexion);
+			request.setAttribute("Mot de passe et/ou email incorrect", erreurConnexion);
+			request.setAttribute("Session incorrect",erreurConnexion);
+			this.getServletContext().getRequestDispatcher("/WEB-INF/Connexion.jsp").forward(request, response);
 		} else if (result.size() == 1) {
 			erreurConnexion = false;
+			request.setAttribute("Mot de passe et/ou email incorrect", erreurConnexion);
+			request.setAttribute("Session incorrect",erreurConnexion);
 			for(User membre : result) {
 				membreConnexion=membre;
 				HttpSession httpSession = request.getSession();

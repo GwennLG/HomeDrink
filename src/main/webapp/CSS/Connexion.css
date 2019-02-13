@@ -16,7 +16,7 @@ body{
 .top{
     display: flex;
     border-bottom: solid 1px blue;
-    background: url("images/banniere_bouteilles.jpg");
+    background: url("../images/banniere_bouteilles.jpg");
     height: 160px;
 }
 
@@ -220,6 +220,11 @@ section .logo{
 
 .formulaire p{
     color: white;
+}
+
+p.error{
+	color: rgba(236, 44, 44);
+	font-weight: bold;
 }
 
 form{

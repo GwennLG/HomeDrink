@@ -54,10 +54,20 @@
     </header>
     
     <section class="formulaire">
-        <form action="InscriptionServlet" method="GET">
+        <form action="InscriptionServlet" method="POST">
             <div class="contenu">
                 <fieldset>
-                    <p>
+					<p class="error">
+						<%
+							Boolean erreurConnexion = (Boolean) request.getAttribute("Session incorrect");
+							if (erreurConnexion == true) {
+								out.println("Cet utilisateur existe déjà ! Connectez-vous.");
+							}
+						%>
+					</p>
+
+
+					<p>
                         <label for="Nom">Nom</label>
                         <input type="text" id="nom" name="nom" placeholder="Nom" required="required"/>
                     </p>
@@ -75,7 +85,7 @@
 
                     <p>
                         <label for="password">Mot de passe</label>
-                        <input type="text" id="password" name="password" placeholder="Mot de passe" required="required"/>
+                        <input type="password" id="password" name="password" placeholder="Mot de passe" required="required"/>
                     </p>
                    
                    

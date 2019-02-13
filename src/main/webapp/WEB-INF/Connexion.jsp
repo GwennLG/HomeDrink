@@ -23,14 +23,61 @@
 
 <body>
     <header class="top">
-
+        <div class="HomeDrink">
+            <img src="images/homedrink.png">
+        </div>
+        <nav>
+            <ul id="menu">
+                <li><a href="/HomeDrink/AccueilServlet">Accueil</a></li>
+                <li><a href="#">Boissons</a>
+                    <ul>
+                        <li><a href="#">Vins / Spiriteux</a></li>
+                        <li><a href="#">Bières</a></li>
+                        <li><a href="#">Sans alcool</a></li>
+                        <li><a href="#">Shooter</a></li>
+                        <li><a href="#">Cocktails</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Création</a></li>
+                <li><a href="#">Coffrets</a></li>
+                <li><a href="#">Apéritifs</a></li>
+                <li><a href="#">Login</a>
+                    <ul>
+                        <li><a href="/HomeDrink/ConnexionServlet">Connexion</a></li>
+                        <li><a href="/HomeDrink/InscriptionServlet">Créer un compte</a></li>
+                        <li><a href="#">Informations Bancaire</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="visites">
+            <%! int compteur =0;%>
+            <% compteur++; %> Nombre de visites: <%=compteur%>
+        </div>
     </header>
     
     <section class="formulaire">
         <form action="ConnexionServlet" method="POST">
             <div class="contenu">
+            <span id ="error"></span>
                 <fieldset>
                    
+                   	<p class = "error">
+                   	<%  
+                   	Boolean erreurConnexion = (Boolean) request.getAttribute("Mot de passe et/ou email incorrect");
+                   	Boolean erreurSession = (Boolean) request.getAttribute("Session incorrect");
+
+                   	if(erreurSession == true) {
+            			out.println("Cet utilisateur existe déjà ! Connectez-vous.");	
+                   	} 
+                   	
+                   	if(erreurConnexion == true) {
+            			out.println("Mot de passe et/ou email incorrect");	
+                   	} 
+                   	
+                   	%>
+                   	</p>
+                   	
                     <p>
                             <label for="email">E-mail</label>
                             <input type="email" id="email" name="email" required="required"/>
@@ -62,7 +109,7 @@
 
 
 	<script>
-	
+
     </script>
 </body>
 </html>
