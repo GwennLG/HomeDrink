@@ -86,6 +86,7 @@ public class ConnexionServlet extends HttpServlet {
 				membreConnexion=membre;
 				HttpSession httpSession = request.getSession();
 				httpSession.setAttribute("userActuel", membreConnexion);
+				httpSession.setAttribute("email", email);
 				this.getServletContext().getRequestDispatcher("/WEB-INF/Accueil.jsp").forward(request, response);
 			}
 		}

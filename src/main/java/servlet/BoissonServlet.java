@@ -63,6 +63,7 @@ public class BoissonServlet extends HttpServlet {
 		SansAlcool cocaCola = new SansAlcool(2.5, 33, "Coca-Cola", "Coca", true);
 		SansAlcool siropGrenadine = new SansAlcool(0, 0, "Sirop Grenadine", "Soft pour Cocktails", false);
 		SansAlcool siropCaramel = new SansAlcool(0, 0, "Sirop Caramel", "Soft pour Cocktails", false);
+		SansAlcool jusAnanas = new SansAlcool(3, 33, "Jus d'Ananas", "Jus d'ananas pressé 100% pur jus", false);
 
 		/*
 		 * Vins
@@ -201,67 +202,68 @@ public class BoissonServlet extends HttpServlet {
 		 */
 		// Vin Spiritueux
 //		GestionBoisson.saveBoisson(kahlua);
-		GestionBoisson.saveBoisson(baileys);
-		GestionBoisson.saveBoisson(brouilly);
-		GestionBoisson.saveBoisson(amaretto);
-		GestionBoisson.saveBoisson(gin);
-		GestionBoisson.saveBoisson(cointreau);
-		GestionBoisson.saveBoisson(tequila);
-		GestionBoisson.saveBoisson(vodka);
-		GestionBoisson.saveBoisson(anjou);
-		GestionBoisson.saveBoisson(muscadet);
-		GestionBoisson.saveBoisson(chardonnay);
+//		GestionBoisson.saveBoisson(baileys);
+//		GestionBoisson.saveBoisson(brouilly);
+//		GestionBoisson.saveBoisson(amaretto);
+//		GestionBoisson.saveBoisson(gin);
+//		GestionBoisson.saveBoisson(cointreau);
+//		GestionBoisson.saveBoisson(tequila);
+//		GestionBoisson.saveBoisson(vodka);
+//		GestionBoisson.saveBoisson(anjou);
+//		GestionBoisson.saveBoisson(muscadet);
+//		GestionBoisson.saveBoisson(chardonnay);
+//		
+//		// Biere
+//		GestionBoisson.saveBoisson(laBete);
+//		GestionBoisson.saveBoisson(kilkenny);
+//		GestionBoisson.saveBoisson(guinness);
+//		GestionBoisson.saveBoisson(murphy);
+//		
+//		
+//		// Shooter
+//		GestionBoisson.saveBoisson(B52);
+//		GestionBoisson.saveBoisson(tequilaShot);
+//		GestionBoisson.saveBoisson(babyGuiness);
+//		GestionBoisson.saveBoisson(orgasm);
+//		GestionBoisson.saveBoisson(tgv);
+//		GestionBoisson.saveBoisson(VodkaCaramel);
+//		
+//		// Cocktails
+//		GestionBoisson.saveBoisson(SexAndTheBeachSoft);
+//		GestionBoisson.saveBoisson(SexAndTheBeach);
+//		GestionBoisson.saveBoisson(cosmoSoft);
+//		GestionBoisson.saveBoisson(cosmo);
+//		GestionBoisson.saveBoisson(mojitoSoft);
+//		GestionBoisson.saveBoisson(mojito);
+//		GestionBoisson.saveBoisson(pinaColadaSoft);
+//		GestionBoisson.saveBoisson(pinaColada);
+//
+//		// Softs
+//		GestionBoisson.saveBoisson(siropCaramel);
+//		GestionBoisson.saveBoisson(siropGrenadine);
+//		GestionBoisson.saveBoisson(cocaCola);
+//		GestionBoisson.saveBoisson(jusPomme);
+//		GestionBoisson.saveBoisson(jusOrange);
+//		GestionBoisson.saveBoisson(tonic);
+//		GestionBoisson.saveBoisson(eauGazeuse);
+		GestionBoisson.saveBoisson(jusAnanas);
+//		
+//		/*
+//		 *   Sauvegarder les instanciations dans la BDD pour les utilisateurs
+//		 */
+//		GestionUser.saveMember(lea);
+//		GestionUser.saveMember(pierrick);
+//		GestionUser.saveMember(kevin);
+//		GestionUser.saveMember(gwen);
+//		
+//		
+//		/*
+//		 *   Sauvegarder les instaciations dans la BDD pour Coffrets
+//		 */
+//		GestionCoffret.saveCoffret(coffret_1);
+//		GestionCoffret.saveCoffret(coffret_2);
+//		GestionCoffret.saveCoffret(coffret_3);
 		
-		// Biere
-		GestionBoisson.saveBoisson(laBete);
-		GestionBoisson.saveBoisson(kilkenny);
-		GestionBoisson.saveBoisson(guinness);
-		GestionBoisson.saveBoisson(murphy);
-		
-		
-		// Shooter
-		GestionBoisson.saveBoisson(B52);
-		GestionBoisson.saveBoisson(tequilaShot);
-		GestionBoisson.saveBoisson(babyGuiness);
-		GestionBoisson.saveBoisson(orgasm);
-		GestionBoisson.saveBoisson(tgv);
-		GestionBoisson.saveBoisson(VodkaCaramel);
-		
-		// Cocktails
-		GestionBoisson.saveBoisson(SexAndTheBeachSoft);
-		GestionBoisson.saveBoisson(SexAndTheBeach);
-		GestionBoisson.saveBoisson(cosmoSoft);
-		GestionBoisson.saveBoisson(cosmo);
-		GestionBoisson.saveBoisson(mojitoSoft);
-		GestionBoisson.saveBoisson(mojito);
-		GestionBoisson.saveBoisson(pinaColadaSoft);
-		GestionBoisson.saveBoisson(pinaColada);
-
-		// Softs
-		GestionBoisson.saveBoisson(siropCaramel);
-		GestionBoisson.saveBoisson(siropGrenadine);
-		GestionBoisson.saveBoisson(cocaCola);
-		GestionBoisson.saveBoisson(jusPomme);
-		GestionBoisson.saveBoisson(jusOrange);
-		GestionBoisson.saveBoisson(tonic);
-		GestionBoisson.saveBoisson(eauGazeuse);
-
-		
-		/*
-		 *   Sauvegarder les instanciations dans la BDD pour les utilisateurs
-		 */
-		GestionUser.saveMember(lea);
-		GestionUser.saveMember(pierrick);
-		GestionUser.saveMember(kevin);
-		GestionUser.saveMember(gwen);
-		
-		
-		/*
-		 *   Sauvegarder les instaciations dans la BDD pour Coffrets
-		 */
-		GestionCoffret.saveCoffret(coffret_1);
-		GestionCoffret.saveCoffret(coffret_2);
-		GestionCoffret.saveCoffret(coffret_3);
 		
 	}
 

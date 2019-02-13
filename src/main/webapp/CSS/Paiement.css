@@ -1,5 +1,4 @@
-@charset "UTF-8";
-
+@charset "ISO-8859-1";
 *{
     box-sizing: border-box;
 }
@@ -29,7 +28,6 @@ body{
 	color : rgba(236, 44, 44, 0.8);
 	font-style: italic;
 }
-
 .top{
     display: flex;
     border-bottom: solid 1px blue;
@@ -178,7 +176,7 @@ nav #menu ul li:first-child a:after{
     border-right: 5px solid transparent;
     border-bottom: 8px solid #444;
 
- /* faire un Ã©lÃ©ment fantome ::after
+ /* faire un élément fantome ::after
  */
 }
 
@@ -229,6 +227,78 @@ section .logo{
     
 }
 
+/*Body*/
+
+.formulaire{
+    padding-top: 30px;
+    
+}
+
+.formulaire p,h3,label{
+    color: white;
+}
+
+form{
+    max-width: 300px;
+    margin: auto;
+}
+
+.numero{
+    max-width: 250px;
+}
+
+.numero input{
+	 max-width: 350px;
+}
+
+.date{
+    max-width: 40px;
+    margin: 0;
+}
+
+.date input{
+	max-width: 70px;
+}
+
+
+.crypto{
+    max-width: 50px;
+    margin: 0;
+}
+
+.crypto input{
+	 max-width: 70px;
+}
+
+fieldset {
+    border:none;
+    
+}
+
+input, textarea{
+padding : 10px;
+border-radius:5px;
+border:none;
+margin-top: 5px;
+color: #666666;
+font-size : 14px;
+font-family: 'Roboto', sans-serif;
+}
+
+#bouton_envoi{
+    color:black;
+}
+    
+    
+#bouton_envoi:hover,#bouton_envoi:focus{
+    background:rgba(236, 44, 44, 0.8); 
+    cursor: pointer;
+}
+
+
+
+
+/*Footer*/
 
 footer{
     color: white;
@@ -242,6 +312,7 @@ footer .infos{
 }
 
 footer .row{
+   
     width: 33.33%;
     justify-content: space-between;
     text-align: center;
@@ -274,6 +345,8 @@ footer h3{
     display: flex;
     justify-content: center;
 }
+
+
 
 
 

@@ -230,6 +230,222 @@ section .logo{
 }
 
 
+
+
+
+/*Body*/
+.coffret{
+    display: flex;
+}
+
+.coffret h1{
+    width: 20%;
+    color: white;
+}
+
+.card{
+    background-color: #fff;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    top: 50%;
+    position: relative;
+    overflow: hidden;
+    transform: translateX(-50%) translateY(-50%);
+    transition: box-shadow 0.3s ease 0s;
+    width: 350px;
+    margin: 300px 10px 0 10px;
+}
+
+.card a{
+    text-decoration: none;
+}
+
+.card:hover{
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+}
+
+.card_date{
+    background-color: #7fc8ca;
+    border-radius: 50%;
+    color: rgb(26, 24, 24);
+    font-weight: bold;
+    height: 50px;
+    line-height: 13px;
+    padding-top: 10px;
+    position: absolute;
+    left: 7px;
+    top:10px;
+    right: 20px;
+    text-align: center;
+    width: 100px;
+}
+
+.card_date_day{
+    display: block;
+    font-size: 15px;
+}
+
+.card_date_month{
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.card_thumb{
+    background-color: #000;
+    height: 205px;
+    overflow: hidden;
+    transition: height 0.3s ease 0s;
+    width: 350px;
+    height: auto;
+}
+
+.card_thumb img{
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+}
+
+
+.card_body {
+    height: 165px;
+    padding: 20px;
+    position: relative;
+    transition: height 0.3s ease 0s;
+}
+
+.card:hover .card_body{
+    height: 330px;
+}
+
+.card_category{
+    background-color: #7fc8ca;
+    font-size: 13px;
+    height: 25px;
+    left: 0;
+    line-height: 25px;
+    padding: 0 15px;
+    position: absolute;
+    top : -25px;
+}
+
+.card_category a{
+    color: #000;
+}
+
+.card_category a:hover{
+    color: #000;
+    font-style: italic;
+}
+
+.card_title{
+    color: #000;
+    font-size: 22px;
+    font-weight: blod;
+    margin: 0;
+    padding: 0 0 10px;
+}
+
+.card_title a{
+    color: #000;
+    font-size: 25px;
+}
+
+.card_title a:hover{
+    font-size: 25px;
+    font-style: italic;
+    color: #7fc8ca;
+}
+
+
+.card_sub{
+    color: rgb(34, 41, 43);
+    font-size: 25px;
+    font-family: 'Dosis', sans-serif;
+    font-style: italic;
+    margin: 0;
+    padding: 0 0 10px;
+}
+
+.card_description{
+    bottom: 65px;
+    color: #666c74;
+    font-size: 16px;
+    left: 20px;
+    line-height: 27px;
+    margin : 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    transform: translateY(25px);
+    transition-delay: 0s;
+    transition-duration: 0.2s, 0.2s;
+    transition-property: opacity, transform;
+    transition-timing-function: ease,ease;
+    text-align: justify;
+}
+
+.card:hover .card_description{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.1s;
+    
+}
+
+.card_footer{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    color: #f87102;   
+}
+
+.card_footer p{
+    margin: 0 0 5px 5px;
+}
+
+.card_footer input{
+    margin: 0 0 5px 5px;
+}
+
+.card_footer a{
+    text-decoration: none;
+    color: #f87102;
+    margin-top: 10px;
+}
+
+.card_footer a:hover{
+    font-weight: bold;
+}
+
+.card_footer input{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.icon{
+    display: inline-block;
+    margin-right: 2px;
+    vertical-align: middle;
+    height: 14px;
+    width: 14px;
+}
+
+.icon--time{
+    background: url("images/sablier.png") no-repeat;
+    margin-top: 10px;
+    
+}
+
+.icon--comment{
+    background: url("images/comments.png") no-repeat;
+    
+    margin-top: 10px;
+    margin-left: 12px;
+}
+
+
+/*Footer*/
+
 footer{
     color: white;
     border-top: 1.5px solid rgb(233, 227, 227);
@@ -274,6 +490,3 @@ footer h3{
     display: flex;
     justify-content: center;
 }
-
-
-

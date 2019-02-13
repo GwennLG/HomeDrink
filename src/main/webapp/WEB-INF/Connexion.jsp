@@ -31,7 +31,7 @@
                 <li><a href="/HomeDrink/AccueilServlet">Accueil</a></li>
                 <li><a href="#">Boissons</a>
                     <ul>
-                        <li><a href="#">Vins / Spiriteux</a></li>
+                        <li><a href="/HomeDrink/Vins_Spiritueux.jsp">Vins / Spiriteux</a></li>
                         <li><a href="#">Bières</a></li>
                         <li><a href="#">Sans alcool</a></li>
                         <li><a href="#">Shooter</a></li>
@@ -39,13 +39,13 @@
                     </ul>
                 </li>
                 <li><a href="#">Création</a></li>
-                <li><a href="#">Coffrets</a></li>
+                <li><a href="/HomeDrink/Coffret.jsp">Coffrets</a></li>
                 <li><a href="#">Apéritifs</a></li>
                 <li><a href="#">Login</a>
                     <ul>
                         <li><a href="/HomeDrink/ConnexionServlet">Connexion</a></li>
                         <li><a href="/HomeDrink/InscriptionServlet">Créer un compte</a></li>
-                        <li><a href="#">Informations Bancaire</a></li>
+                        <li><a href="/HomeDrink/PaiementServlet">Informations Bancaire</a></li>
                     </ul>
                 </li>
             </ul>

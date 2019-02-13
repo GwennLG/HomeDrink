@@ -1,21 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="homeDrink.css" rel="stylesheet">
+    <link href="coffret.css" rel="stylesheet">
     <link rel="icon" href="images/icon.jpg">
-    <link type="text/css" rel="stylesheet" href="CSS/Accueil.css">
-    <title>HomeDrink</title>
+    <link type="text/css" rel="stylesheet" href="CSS/Coffret.css">
+    <title>Coffret</title>
 </head>
 
 <body>
-    <header class="top">
+     <header class="top">
     	<a href="/HomeDrink/DeconnexionServlet" class = "connexion">
     	<% String deconnexion = (String) session.getAttribute("email");
     	
@@ -58,35 +57,61 @@
     </header>
 
 
-    <section class="propos">
-        <div class="logo">
-            <img src="images/logo.png">
-        </div>
-        <div class="imageAccueil">
-            <img src="images\propos.jpg">
-        </div>
-        <div class="texte">
-            <h2>À Propos</h2>
-            <p>Né de la concertation de quatre amis ce site se veut unique, intéractif et laisse place à l'imagination
-                des clients.
-                Ce nouveau concept de bar en ligne vous offre la possibilité de créer vos propres shooters à partir
-                d'une large
-                gamme de boissons alcoolisées ou non. Si vous vous sentez casanier, que le temps vous empêche de sortir,
-                commandez vos boissons directement en ligne et soyez livrés en moins de 30 minutes ! </br></br>
+    <section class="coffret" id="ongletCoffret">
+        <h1>Coffrets disponibles</h1>
+        <article class="card">
 
-                En panne d'idées cadeaux, Noël approche rapidement et vous n'avez toujours rien acheté, ne cherchez
-                plus, nous avons la solution.
-                <b>Créez votre propre coffret</b>, choississez la quantité, le type de bouteille. Votre imagination est
-                la seule limite à la conception
-                de ces coffrets livrés dans une magnifique boîte.
-                Pour un supplément de 1€ nous emballons et dédions cette idée cadeau à la personne de votre choix.
-                </br></br>
+            <div class="card_thumb">
+                <a href="#">
+                    <img src="images/coffret1.png" alt="coffret1">
+                </a>
+            </div>
+            <div class="card_date">
+                <span class="card_date_day">35 €</span>
+                <span class="card_date_month">Irish Time</span>
+            </div>
+            <footer class="card_footer">
+                <p>3 bières : 2 Guinness, 1 Kilkenny <br/>
+                    1 bouteille de spiritueux : Bayley's<br/></p>
+                <input type="button" value="Ajouter au panier"></button>
+            </footer>
+        </article>
 
-                Un partenariat avec la multinationale G'F1 vous permettra de découvrir comment marier de la meilleure
-                possible vos plats et vos boissons.
-                Vous en apprendez plus sur ces associations uniques et magiques dans l'onglet "apéritifs".
-            </p>
-        </div>
+        <article class="card">
+            <div class="card_thumb">
+                <a href="#">
+                    <img src="images/coffret2.jpg" alt="coffret2">
+                </a>
+            </div>
+            <div class="card_date">
+                <span class="card_date_day">25 €</span>
+                <span class="card_date_month">Apéro aux vins</span>
+            </div>
+            <footer class="card_footer">
+                <p>2 bouteilles de vins : Brouilly et Chardonnay <br/>
+                    1 bouteille de Coca-Cola<br/></p>
+                <input type="button" value="Ajouter au panier"></button>
+            </footer>
+        </article>
+
+        <article class="card">
+            <div class="card_thumb">
+                <a href="#">
+                    <img src="images/coffret3.jpg" alt="coffret3">
+                </a>
+            </div>
+            <div class="card_date">
+                <span class="card_date_day">77 €</span>
+                <span class="card_date_month">Irish Time ++</span>
+            </div>
+            <footer class="card_footer">
+                <p>2 bouteilles de spiritueux : Bayley's et Kalhua<br/>
+                    6 bouteilles de bières : 2 Kilkenny, Guinness, La Bête, 2 Murphy's<br/>
+                    1 bouteille de jus de pomme 
+                </p>
+                <input type="button" value="Ajouter au panier"></button>
+            </footer>
+        </article>
     </section>
 
 
@@ -109,9 +134,9 @@
             <div class="row">
                 <h2> Suivez-Nous </h2>
                 <ul class="social">
-                    <li><a href="#"><img src="images/face.png"> Facebook</a></li>
-                    <li><a href="#"><img src="images/twitter.png"> Twitter</a></li>
-                    <li><a href="#"><img src="images/instagram.png"> Instagram</a></li>
+                    <li><a href="#"><img src="images/face.png">Facebook</a></li>
+                    <li><a href="#"><img src="images/twitter.png">Twitter</a></li>
+                    <li><a href="#"><img src="images/instagram.png">Instagram</a></li>
                 </ul>
             </div>
         </div>
@@ -120,7 +145,5 @@
         </div>
     </footer>
 
-
 </body>
-
 </html>
