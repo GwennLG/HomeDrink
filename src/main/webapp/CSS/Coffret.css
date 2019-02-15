@@ -98,7 +98,12 @@ nav #menu a{
 }
 
 nav #menu li a:hover{
-    color: aqua;
+    color: rgba(236, 44, 44);
+    font-style: italic;
+}
+
+nav #menu li ul li a:hover{
+    color: white;
     font-style: italic;
 }
 
@@ -111,7 +116,7 @@ nav #menu ul{
     top: 35px;
     left: 0;
     z-index: 99999;
-    background: #444;
+    background: #fd200b;
     background: -moz-linear-gradient(#444, #111);
     background: -webkit-linear-gradient(#444, #111);
     background: -o-linear-gradient(#444,#111);
@@ -147,12 +152,12 @@ nav #menu ul li:last-child {
 
 nav #menu ul a:hover{
    
-    background: #0c4e57;
-    background: -moz-linear-gradient(#196d70, #0c4e57);
-    background: -webkit-linear-gradient(#196d70, #0c4e57);
-    background: -o-linear-gradient(#196d70,#0c4e57);
-    background: -ms-linear-gradient(#196d70,#0c4e57);
-    background: linear-gradient(#196d70, #0c4e57);
+    background: #a30707;
+    background: -moz-linear-gradient(#ff000, #a30707);
+    background: -webkit-linear-gradient(#ff000, #a30707);
+    background: -o-linear-gradient(#ff000,#a30707);
+    background: -ms-linear-gradient(#ff000,#a30707);
+    background: linear-gradient(#ff000, #a30707);
 }
 
 nav #menu ul li:first-child a {
@@ -183,7 +188,7 @@ nav #menu ul li:first-child a:after{
 }
 
 nav #menu ul li:first-child a:hover:after{
-   border-bottom-color: #0c4e57;
+   border-bottom-color: #a30707;
 }
 
 /* Retablissement du flottement */
@@ -196,6 +201,20 @@ nav #menu:after{
 
 .visites{
     color: white;
+	align-self: flex-end;
+    position : absolute;
+    padding : 0 0 5px 10px;
+}
+
+#panier {
+    height:20px;
+    width: 20px;
+}
+
+.basket {
+    display: flex;
+    flex-direction: row;
+  
 }
 
 section .logo{
@@ -277,6 +296,10 @@ section .logo{
     right: 20px;
     text-align: center;
     width: 100px;
+}
+
+.card_date img{
+    margin: -15px 0 0 265px;
 }
 
 .card_date_day{

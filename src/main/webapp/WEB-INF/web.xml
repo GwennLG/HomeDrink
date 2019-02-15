@@ -46,6 +46,12 @@
   	<description></description>
   	<servlet-class>servlet.PaiementServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>PanierServlet</servlet-name>
+  	<display-name>PanierServlet</display-name>
+  	<description></description>
+  	<servlet-class>servlet.PanierServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>BoissonServlet</servlet-name>
   	<url-pattern>/BoissonServlet</url-pattern>
@@ -73,5 +79,9 @@
   <servlet-mapping>
   	<servlet-name>PaiementServlet</servlet-name>
   	<url-pattern>/PaiementServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PanierServlet</servlet-name>
+  	<url-pattern>/PanierServlet</url-pattern>
   </servlet-mapping>
 </web-app>

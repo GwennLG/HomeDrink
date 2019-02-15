@@ -1,0 +1,329 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+
+/*Header*/
+.connexion{
+	color: #111;
+	position: absolute;
+	padding : 7px 0 0 20px;
+	text-decoration: none;
+}
+
+.connexion a{
+	color : #111;
+	text-decoration: none;
+}
+
+.connexion:hover{
+	color : rgba(236, 44, 44, 0.8);
+	font-style: italic;
+}
+
+.top{
+    display: flex;
+    border-bottom: solid 1px blue;
+    background: url("../images/banniere_bouteilles.jpg");
+    height: 160px;
+}
+
+.HomeDrink{
+    background: rgba(195, 195, 195);
+    height: 140px;
+    width: 456px;
+    margin-top: 10px;
+}
+nav ul{
+    display: flex;
+
+}
+
+nav{
+    padding: 65px 25px 0 5%;
+}
+
+
+nav #menu {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0 ;
+    list-style: none;
+    background: #111;
+    background: -moz-linear-gradient(#444, #111);
+    background: -webkit-linear-gradient(#444, #111);
+    background: -o-linear-gradient(#444,#111);
+    background: -ms-linear-gradient(#444,#111);
+    background: linear-gradient(#444, #111);
+    -moz-border-radius : 10px;
+    border-radius: 10px;
+    -moz-box-shadow : 0 2px 1px #9c9c9c;
+    -webkit-box-shadow : 0 2px 1px #9c9c9c;
+    box-shadow: 0 2px 1px #9c9c9c; 
+
+}
+
+nav #menu li:hover > ul{
+    display: block;
+}
+
+nav #menu li{
+    float: left;
+    padding: 0 0 10px 0;
+    position: relative;
+}
+
+nav #menu a{
+    float: right;
+    height: 25px;
+    padding: 0 25px;
+    color: #e3e3e3;
+    text-transform: uppercase;
+    font: 400 13px/25px 'Dosis', sans-serif;
+    /*font-weight: 400;
+    line-height: 25px;
+    font-size: 13px;
+    font-family: 'Dosis', sans-serif;*/
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+}
+
+nav #menu li a:hover{
+    color: rgba(236, 44, 44);
+    font-style: italic;
+}
+
+nav #menu li ul li a:hover{
+    color: white;
+    font-style: italic;
+}
+
+nav #menu ul{
+    margin: 0;
+    padding: 0 ;
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 99999;
+    background: #fd200b;
+    background: -moz-linear-gradient(#444, #111);
+    background: -webkit-linear-gradient(#444, #111);
+    background: -o-linear-gradient(#444,#111);
+    background: -ms-linear-gradient(#444,#111);
+    background: linear-gradient(#444, #111);
+    -moz-border-radius : 5px;
+    border-radius: 5px;
+   
+}
+
+nav #menu ul a {
+    padding: 10px;
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: normal;
+    float: none;
+    text-transform: none;
+}
+
+nav #menu ul li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-shadow: 0px 1px 0px white;
+}
+
+nav #menu ul li:last-child {
+    -moz-box-shadow:none;
+    -webkit-box-shadow : none;
+}
+
+nav #menu ul a:hover{
+   
+    background: #a30707;
+    background: -moz-linear-gradient(#ff000, #a30707);
+    background: -webkit-linear-gradient(#ff000, #a30707);
+    background: -o-linear-gradient(#ff000,#a30707);
+    background: -ms-linear-gradient(#ff000,#a30707);
+    background: linear-gradient(#ff000, #a30707);
+}
+
+nav #menu ul li:first-child a {
+    -moz-boder-radius : 5px 5px 0 0;
+    -webkit-boder-radius : 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+nav #menu ul li:last-child a {
+    -moz-boder-radius : 0 0 5px 5px;
+    -webkit-boder-radius :  0 0 5px 5px;
+    border-radius: 0 0 5px 5px ;
+}
+
+nav #menu ul li:first-child a:after{
+    content: '';
+    position: absolute;
+    left: 25px;
+    top : -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #444;
+
+ /* faire un élément fantome ::after
+ */
+}
+
+nav #menu ul li:first-child a:hover:after{
+   border-bottom-color: #a30707;
+}
+
+/* Retablissement du flottement */
+
+nav #menu:after{
+ display: block;
+ content: "";
+ clear:both;
+}
+
+.visites{
+    color: white;
+	align-self: flex-end;
+    position : absolute;
+    padding : 0 0 5px 10px;
+}
+
+#panier {
+    height:20px;
+    width: 20px;
+}
+
+.basket {
+    display: flex;
+    flex-direction: row;
+  
+}
+
+section .logo{
+    width: 200px;
+    height: auto;
+    margin: 20px 0 0 20px;
+    margin-left: 42%;
+}
+
+.propos img{
+    padding: 30px 0 0 0;
+    width: 100%;
+    height: auto;
+}
+
+.texte{
+    margin-top: -500px;
+    position: absolute;
+    width: 98.85%;
+    background: rgba(236, 44, 44, 0.8);
+}
+.texte h2{
+    color: white;
+    margin-left: 46%;
+}
+
+.propos p{
+    color: white;
+    margin : 0 20% ;
+    text-align: justify;
+    
+}
+
+/*Body*/
+
+h1{
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px 0 35px 0;
+}
+
+p{
+	color : white;
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+
+p .para{
+	margin: 0 0 50px 0;
+}
+
+p a{
+	text-decoration: none;
+	color : red;
+}
+
+
+
+/*Footer*/
+
+footer{
+    color: white;
+    border-top: 1.5px solid rgb(233, 227, 227);
+    margin : 45px 0 0 0;
+}
+
+footer .infos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .row{
+   
+    width: 33.33%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+footer h2{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px;
+}
+
+.row ul{
+    list-style: none;
+    text-align: left;
+    line-height: 1.8;
+    padding: 0 0 0 150px;
+}
+
+.row a{
+ text-decoration: none;
+ color: rgba(236, 44, 44);
+}
+
+.row a:hover{
+    color: rgb(212, 187, 187);
+    
+}
+
+footer h3{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+

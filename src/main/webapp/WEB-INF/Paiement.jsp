@@ -1,14 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <!--type doc-->
 <html lang="fr">
 <!--langue de la page-->
 
 <head>
-    <!--indique les fonctionnalité utilisé-->
+    <!--indique les fonctionnalitÃ© utilisÃ©-->
     <meta charset="utf-8">
-    <!--encodage de caractère, a placer a en premier dans head !!!!!!!-->
+    <!--encodage de caractÃ¨re, a placer a en premier dans head !!!!!!!-->
     <title>Paiement</title>
     <!--titre de l onglet-->
     <link link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -22,7 +22,7 @@
 
 
 <body>
-  <header class="top">
+   <header class="top">
     	<a href="/HomeDrink/DeconnexionServlet" class = "connexion">
     	<% String deconnexion = (String) session.getAttribute("email");
     	
@@ -40,22 +40,23 @@
                 <li><a href="#">Boissons</a>
                     <ul>
                         <li><a href="/HomeDrink/Vins_Spiritueux.jsp">Vins / Spiriteux</a></li>
-                        <li><a href="#">Bières</a></li>
-                        <li><a href="#">Sans alcool</a></li>
-                        <li><a href="#">Shooter</a></li>
-                        <li><a href="#">Cocktails</a></li>
+                        <li><a href="/HomeDrink/Biere.jsp">BiÃ¨res</a></li>
+                        <li><a href="/HomeDrink/Soft.jsp">Sans alcool</a></li>
+                        <li><a href="/HomeDrink/Shooter.jsp">Shooter</a></li>
+                        <li><a href="/HomeDrink/Cocktail.jsp">Cocktails</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Création</a></li>
+                <li><a href="#">CrÃ©ation</a></li>
                 <li><a href="/HomeDrink/Coffret.jsp">Coffrets</a></li>
-                <li><a href="#">Apéritifs</a></li>
+                <li><a href="/HomeDrink/Aperitif.jsp">ApÃ©ritifs</a></li>
                 <li><a href="#">Login</a>
                     <ul>
                         <li><a href="/HomeDrink/ConnexionServlet">Connexion</a></li>
-                        <li><a href="/HomeDrink/InscriptionServlet">Créer un compte</a></li>
+                        <li><a href="/HomeDrink/InscriptionServlet">CrÃ©er un compte</a></li>
                         <li><a href="/HomeDrink/PaiementServlet">Informations Bancaire</a></li>
                     </ul>
                 </li>
+                <li><a href="/HomeDrink/PanierServlet"><div class="basket"><img id= "panier" src="images/panier.png" alt="panier">Panier</div></a></li>
             </ul>
         </nav>
         <div class="visites">
@@ -65,7 +66,7 @@
     </header>
     
     <section class="formulaire">
-        <form action="envoi.php" method="POST">
+        <form action="PaiementServlet" method="POST">
             <div class="contenu">
                 <fieldset>
                     
@@ -84,7 +85,7 @@
 
                         <span class="date">
                             
-                            <label for="annee">Année<i></label>
+                            <label for="annee">AnnÃ©e<i></label>
                             <input type="number" id="annee" name="annee"  required="required" min="4"/>
                         </span> 
                     </div> 
@@ -112,15 +113,15 @@
                 <div class="row">
                     <h2>Nos videos</h2>
                     <ul>
-                        <li><a href="#">Vidéos de nos cocktails</a></li>
-                        <li><a href="#">Vidéos de nos shooters</a></li>
+                        <li><a href="#">VidÃ©os de nos cocktails</a></li>
+                        <li><a href="#">VidÃ©os de nos shooters</a></li>
                     </ul>
                 </div>
                 <div class="row">
                     <h2> Infos Pratiques </h2>
                     <ul>
                         <li><a href="#">Nous trouver</a></li>
-                        <li><a href="#">Espace Fidelité</a></li>
+                        <li><a href="#">Espace FidelitÃ©</a></li>
                     </ul>
                 </div>
                 <div class="row">
@@ -133,7 +134,7 @@
                 </div>
             </div>
             <div>
-                <h3>Home Drink // 2019 © <a href="#"> </a></h3>
+                <h3>Home Drink // 2019 Â© <a href="#"> </a></h3>
             </div>
         </footer>
     
@@ -141,7 +142,7 @@
         var formValid = document.getElementById('bouton_envoi');
 
         var user = document.getElementById('nom');
-        var userValidation = /^[a-zA-ZéêèîïÌÎÈÉ][A-Za-zéêëèàçîï]+([-'\s][a-zA-ZéêèîïÌÎÈÉ][A-Za-zéêëèàçîï]+)?/;
+        var userValidation = /^[a-zA-ZÃ©ÃªÃ¨Ã®Ã¯ÃŒÃŽÃˆÃ‰][A-Za-zÃ©ÃªÃ«Ã¨Ã Ã§Ã®Ã¯]+([-'\s][a-zA-ZÃ©ÃªÃ¨Ã®Ã¯ÃŒÃŽÃˆÃ‰][A-Za-zÃ©ÃªÃ«Ã¨Ã Ã§Ã®Ã¯]+)?/;
         var missingNom = document.getElementById('missingNom');
 
        

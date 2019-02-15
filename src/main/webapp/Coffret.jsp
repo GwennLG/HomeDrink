@@ -14,7 +14,7 @@
 </head>
 
 <body>
-     <header class="top">
+      <header class="top">
     	<a href="/HomeDrink/DeconnexionServlet" class = "connexion">
     	<% String deconnexion = (String) session.getAttribute("email");
     	
@@ -32,15 +32,15 @@
                 <li><a href="#">Boissons</a>
                     <ul>
                         <li><a href="/HomeDrink/Vins_Spiritueux.jsp">Vins / Spiriteux</a></li>
-                        <li><a href="#">Bières</a></li>
-                        <li><a href="#">Sans alcool</a></li>
-                        <li><a href="#">Shooter</a></li>
-                        <li><a href="#">Cocktails</a></li>
+                        <li><a href="/HomeDrink/Biere.jsp">Bières</a></li>
+                        <li><a href="/HomeDrink/Soft.jsp">Sans alcool</a></li>
+                        <li><a href="/HomeDrink/Shooter.jsp">Shooter</a></li>
+                        <li><a href="/HomeDrink/Cocktail.jsp">Cocktails</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Création</a></li>
                 <li><a href="/HomeDrink/Coffret.jsp">Coffrets</a></li>
-                <li><a href="#">Apéritifs</a></li>
+                <li><a href="/HomeDrink/Aperitif.jsp">Apéritifs</a></li>
                 <li><a href="#">Login</a>
                     <ul>
                         <li><a href="/HomeDrink/ConnexionServlet">Connexion</a></li>
@@ -48,6 +48,7 @@
                         <li><a href="/HomeDrink/PaiementServlet">Informations Bancaire</a></li>
                     </ul>
                 </li>
+                <li><a href="/HomeDrink/PanierServlet"><div class="basket"><img id= "panier" src="images/panier.png" alt="panier">Panier</div></a></li>
             </ul>
         </nav>
         <div class="visites">
@@ -58,6 +59,7 @@
 
 
     <section class="coffret" id="ongletCoffret">
+    <% int numId = 1; %>
         <h1>Coffrets disponibles</h1>
         <article class="card">
 
@@ -69,6 +71,7 @@
             <div class="card_date">
                 <span class="card_date_day">35 €</span>
                 <span class="card_date_month">Irish Time</span>
+                <img id="images<%out.print(numId++);%>" src="images/starBlack.png">
             </div>
             <footer class="card_footer">
                 <p>3 bières : 2 Guinness, 1 Kilkenny <br/>
@@ -86,6 +89,7 @@
             <div class="card_date">
                 <span class="card_date_day">25 €</span>
                 <span class="card_date_month">Apéro aux vins</span>
+                <img id="images<%out.print(numId++);%>" src="images/starBlack.png">
             </div>
             <footer class="card_footer">
                 <p>2 bouteilles de vins : Brouilly et Chardonnay <br/>
@@ -103,6 +107,7 @@
             <div class="card_date">
                 <span class="card_date_day">77 €</span>
                 <span class="card_date_month">Irish Time ++</span>
+                <img id="images<%out.print(numId++);%>" src="images/starBlack.png">
             </div>
             <footer class="card_footer">
                 <p>2 bouteilles de spiritueux : Bayley's et Kalhua<br/>
@@ -144,6 +149,54 @@
             <h3>Home Drink // 2019 © <a href="#"> </a></h3>
         </div>
     </footer>
+    
+     <script src=' http://code.jquery.com/jquery.min.js '></script>
+    <script>
+
+        var link = $("#images1");
+        
+        var imageActuelle = "starBlack";
+
+        link.on('click', function () {
+            if (imageActuelle == "starBlack") {
+                link.prop('src', 'images/star.png');
+                imageActuelle = 'star';
+            } else if (imageActuelle == 'star') {
+                link.prop('src', 'images/starBlack.png');
+                imageActuelle = 'starBlack';
+            }
+        });
+        
+        var link2 = $("#images2");
+        
+        var imageActuelle2 = "starBlack";
+
+        link2.on('click', function () {
+            if (imageActuelle2 == "starBlack") {
+                link2.prop('src', 'images/star.png');
+                imageActuelle2 = 'star';
+            } else if (imageActuelle2 == 'star') {
+                link2.prop('src', 'images/starBlack.png');
+                imageActuelle2 = 'starBlack';
+            }
+        });
+        
+        
+        var link3 = $("#images3");
+        
+        var imageActuelle3 = "starBlack";
+
+        link3.on('click', function () {
+            if (imageActuelle3 == "starBlack") {
+                link3.prop('src', 'images/star.png');
+                imageActuelle3 = 'star';
+            } else if (imageActuelle3 == 'star') {
+                link3.prop('src', 'images/starBlack.png');
+                imageActuelle3 = 'starBlack';
+            }
+        });
+        
+    </script>
 
 </body>
 </html>

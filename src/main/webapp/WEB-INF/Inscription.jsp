@@ -19,7 +19,15 @@
 
 
 <body>
-    <header class="top">
+     <header class="top">
+    	<a href="/HomeDrink/DeconnexionServlet" class = "connexion">
+    	<% String deconnexion = (String) session.getAttribute("email");
+    	
+    	if(deconnexion != null){
+    		out.println("Deconnexion");
+    	}
+    	%>
+    	</a>
         <div class="HomeDrink">
             <img src="images/homedrink.png">
         </div>
@@ -29,15 +37,15 @@
                 <li><a href="#">Boissons</a>
                     <ul>
                         <li><a href="/HomeDrink/Vins_Spiritueux.jsp">Vins / Spiriteux</a></li>
-                        <li><a href="#">Bières</a></li>
-                        <li><a href="#">Sans alcool</a></li>
-                        <li><a href="#">Shooter</a></li>
-                        <li><a href="#">Cocktails</a></li>
+                        <li><a href="/HomeDrink/Biere.jsp">Bières</a></li>
+                        <li><a href="/HomeDrink/Soft.jsp">Sans alcool</a></li>
+                        <li><a href="/HomeDrink/Shooter.jsp">Shooter</a></li>
+                        <li><a href="/HomeDrink/Cocktail.jsp">Cocktails</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Création</a></li>
                 <li><a href="/HomeDrink/Coffret.jsp">Coffrets</a></li>
-                <li><a href="#">Apéritifs</a></li>
+                <li><a href="/HomeDrink/Aperitif.jsp">Apéritifs</a></li>
                 <li><a href="#">Login</a>
                     <ul>
                         <li><a href="/HomeDrink/ConnexionServlet">Connexion</a></li>
@@ -45,6 +53,7 @@
                         <li><a href="/HomeDrink/PaiementServlet">Informations Bancaire</a></li>
                     </ul>
                 </li>
+                <li><a href="/HomeDrink/PanierServlet"><div class="basket"><img id= "panier" src="images/panier.png" alt="panier">Panier</div></a></li>
             </ul>
         </nav>
         <div class="visites">
